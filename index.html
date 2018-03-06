@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>后台管理</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+    <link href="src/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="src/css/ace.min.css" />
+    <!-- <script src="node_modules/vue/dist/vue.js"></script> -->
+    <!-- <script src="node_modules/vue-router/dist/vue-router.js"></script> -->
+    <!-- <script type="text/javascript" src="node_modules/vue/vue.js"></script> -->
+
+</head>
+
+<body>
+<div id="index-page">
+
+
+<div class="navbar navbar-default" id="navbar">
+
+    <div class="navbar-container" id="navbar-container">
+        <!-- 项目名称 -->
+        <div class="navbar-header pull-left">
+            <a class="navbar-brand" href="/" target="_blank"><small><i class="icon-leaf"></i>&nbsp;后台管理</small></a>
+        </div>
+        <!-- 信息区域 -->
+        <div class="navbar-header pull-right" role="navigation">
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="main-container" id="main-container">
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+        <div class="sidebar" id="sidebar">
+            <ul class="nav nav-list" id="menu">
+                <li>
+                    <router-link to="/">
+                        <i class="${menu.icon}"></i>
+                        <span class="menu-text"> 首页面</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/home">
+                        <i class="${menu.icon}"></i>
+                        <span class="menu-text"> home</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link to="/bar">
+                        <i class="${menu.icon}"></i>
+                        <span class="menu-text"> bar</span>
+                    </router-link>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="breadcrumbs" id="breadcrumbs">
+
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="#">首页</a>
+                </li>
+                <li class="active">控制台{{title}}</li>
+            </ul><!-- .breadcrumb -->
+
+        </div>
+
+        <div class="page-content" id="page-content">
+            <router-view></router-view>
+        </div>
+
+    </div>
+</div>
+</div>
+<script src="dist/bundle.js"></script>
+<script type="text/javascript">
+    // var vm = new Vue({ el: '#index-page' })
+</script>
+</body>
+</html>
