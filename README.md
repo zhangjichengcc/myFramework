@@ -1,24 +1,4 @@
 # create by zhangjicheng 
-
- ─ │ ┌ └ ├ ┤ ┼
-
-┌─────
-│
-
-├
-
-
-├
-
-
-├
-
-
-├
-
-
-└
-
 # 项目布局
 
 ├── dist                                        // webpack打包文件
